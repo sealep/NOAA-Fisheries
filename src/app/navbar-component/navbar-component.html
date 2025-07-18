@@ -1,0 +1,11 @@
+<nav>
+    <h3>NOAA Fisheries Regions</h3>
+  <ul>
+    <li>
+        <a routerLink="/home" routeLinkActive="active">Home</a>
+    </li>
+    <li *ngFor="let region of regionNames$ | async">
+      <a [routerLink]="['/region', region ]" routerLinkActive="active">{{ region }}</a>
+    </li>
+  </ul>
+</nav>

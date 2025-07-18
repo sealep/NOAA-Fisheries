@@ -1,0 +1,15 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    padding: 2%;
+}
+.row, .header {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 25%);
+}
+.header {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}

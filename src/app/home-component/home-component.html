@@ -1,0 +1,12 @@
+  <div class="wrapper">
+    <div class="header">
+        <div>Region Name</div>
+        <div>Average Calories</div>
+        <div>Average Fat</div>
+    </div>
+    <div class="row" *ngFor="let region of regions$ | async">
+      <div>{{ region.name }}</div>
+      <div>{{ region.avgCalories }}</div>
+      <div>{{ region.avgFat }}</div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+  <div class="header" *ngIf="region$ | async as region">
+        <div class="region-name">{{ region.name }}</div>
+        <div><span class="label">Average Calories:</span> {{ region.avgCalories }}</div>
+        <div><span class="label">Average Fat:</span> {{ region.avgFat }}</div>
+  </div>
+  <div class="fishes">
+    <div class="fish" *ngFor="let fish of (region$ | async)!.fishes">
+      <p class="fish-name">{{ fish.name }}</p>
+        <div><span class="label">Calories:</span> {{ fish.calories }}</div>
+        <div><span class="label">Fat:</span> {{ fish.fat }}</div>
+        <img src={{fish.imageUrl}}/>
+        <!-- Angular says it sanitizes innerHTML -->
+        <div [innerHTML]="fish.description"></div>
+    </div>
+</div>

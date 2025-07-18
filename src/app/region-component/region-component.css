@@ -1,0 +1,21 @@
+.header, .fishes, .fish {
+    padding: 2%;
+}
+.fish-name, .region-name, .label {
+    font-weight: bold;
+}
+.region-name {
+    font-size: 120%;
+}
+.label {
+    font-style: italic;
+}
+.fish:nth-child(even) {
+    background-color: aliceblue;
+}
+.fish:nth-child(odd) {
+    background-color: aquamarine;
+}
+img {
+    width: 100%;
+}
